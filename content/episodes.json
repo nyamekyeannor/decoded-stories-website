@@ -31,7 +31,8 @@
       "date": "Jan 10, 2025",
       "description": "In this very first episode of Decoded Stories, I’m sitting down with… well, just me! 🎙️ In this episode, I share my excitement (and nerves) as I kick off this journey. I break down the why behind Decoded Stories – a space to dive into the real, raw stories of developers and tech professionals who’ve inspired me. This podcast is about connection, inspiration, growth, and community, and I’m glad...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-1-The-Beginning-of-Decoded-Stories--Why-I-Started-a-Podcast-e2taikv"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-1-The-Beginning-of-Decoded-Stories--Why-I-Started-a-Podcast-e2taikv",
+      "url": "https://youtu.be/eLfqWq6_n7A"
     },
     {
       "id": "s1-ep02",
@@ -43,7 +44,8 @@
       "date": "Jan 17, 2025",
       "description": "With over 15 years in Financial Systems, this week’s guest brings a wealth of knowledge and insights to Decoded Stories. We dive into Micky’s journey, his background in Financial Systems Technology, how tech has evolved, and how to stay ahead in this ever-changing industry.💡 Plus, we discuss navigating AI advancements, cybersecurity, and maintaining balance in a tech-driven world.🔗 Stay...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-2Over-15-Years-in-Financial-Systems-Technology--Navigating-Through-Its-Evolution-e2tjud5"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-2Over-15-Years-in-Financial-Systems-Technology--Navigating-Through-Its-Evolution-e2tjud5",
+      "url": "https://youtu.be/cX5RujpRliQ"
     },
     {
       "id": "s1-ep03",
@@ -55,7 +57,8 @@
       "date": "Jan 31, 2025",
       "description": "In this episode of Decoded Stories, we sit down with Einstein Owusu to explore his inspiring journey from working late-night shifts as a security officer to landing a role as a Tier 3 Security Engineer in tech. Einstein shares his challenges, the steps he took to break into the industry, and the mindset that kept him pushing forward. Whether you're looking to transition into tech or simply love...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-3-From-Security-Guard-To-Security-Engineer-e2u7af0"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-3-From-Security-Guard-To-Security-Engineer-e2u7af0",
+      "url": "https://youtu.be/6117tzh2w10"
     },
     {
       "id": "s1-ep04",
@@ -67,7 +70,8 @@
       "date": "Feb 14, 2025",
       "description": "In this episode of Decoded Stories, we sit down with Alicia Ahl, a powerhouse in tech who has defied the odds to carve out her own path. From overcoming obstacles to landing a role at Microsoft, Alicia’s journey is nothing short of inspiring. We explore her background—from middle school to college, her time in trading, and her transition into tech—diving deep into the challenges she faced and the...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-4-Breaking-Barriers--Building-Wealth-Young-e2usg4u"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-4-Breaking-Barriers--Building-Wealth-Young-e2usg4u",
+      "url": "https://youtu.be/lGcvT_1ZI0M"
     },
     {
       "id": "s1-ep05",
@@ -77,9 +81,10 @@
       "title": "CS student making waves in tech",
       "category": "Creative Identity",
       "date": "Feb 28, 2025",
-      "description": "In this episode of Decoded Stories, we sit down with Levi, a 22-year-old Computer Science student and self-taught software developer who’s already making waves in tech. Despite still being in school, Levi has honed his coding skills, built projects, and is building community by sharing his journey online. We dive into whether college is truly worth it, the impact of great (and not-so-great)...",
+      "description": "In this episode of Decoded Stories, we sit down with Levi, a 22-year-old Computer Science student and self-taught software developer who’s already making waves in tech. Despite still being in school, Levi has honed his coding skills, built projects, and is inspiring thousands by sharing his journey online. We dive into whether college is truly worth it, the impact of great (and not-so-great)...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-5-CS-student-making-waves-in-tech-e2vh908"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-5-CS-student-making-waves-in-tech-e2vh908",
+      "url": "https://youtu.be/EDAb2pZJD0g"
     },
     {
       "id": "s1-ep06",
@@ -91,7 +96,8 @@
       "date": "Mar 14, 2025",
       "description": "In this episode, I sit down with Tranequa, a determined single mother who transformed her life by breaking into tech. From facing financial struggles to landing a life-changing role as a software engineer at Southwest Airlines, she shares her incredible journey—how she navigated challenges, stayed confident, and leveled up through a coding bootcamp. If you’ve ever doubted yourself or felt like...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-6-From-Single-Mom-to-Software-Engineer-e3067uo"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-6-From-Single-Mom-to-Software-Engineer-e3067uo",
+      "url": "https://youtu.be/oEXZ8vyGshM"
     },
     {
       "id": "s1-ep07",
@@ -103,7 +109,8 @@
       "date": "Mar 28, 2025",
       "description": "In this episode, I sit down with my younger brother, Kofi, as he shares his inspiring journey into the tech industry. From dreaming of becoming an astronaut to considering a career as a band teacher, his path took unexpected turns. College wasn’t easy—he faced struggles, setbacks, and moments of doubt. But through perseverance and determination, he landed a six-figure job right out of school and...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-7-From-College-to-Six-Figures-e30oare"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-7-From-College-to-Six-Figures-e30oare",
+      "url": "https://youtu.be/oPOrSeO5Xns"
     },
     {
       "id": "s1-ep08",
@@ -113,9 +120,10 @@
       "title": "She Broke Into tech In 3 Months",
       "category": "Career Pivot",
       "date": "Apr 11, 2025",
-      "description": "In this episode, I sit down with someone close to my heart—my wife, Jennifer. She shares how she broke into tech as a self-taught UX Designer while being a mom of three, a wife, and working part-time. From long nights to landing her first role at IBM, she opens up about the sacrifice, mindset, and resilience it took to make the leap. Whether you're a parent, a career-changer, or simply need a...",
+      "description": "In this episode, I sit down with someone close to my heart—my wife, Jennifer. She shares how she broke into tech as a self-taught UX Designer while being a mom of three, a wife, and working part-time. From long nights to landing her first role at IBM , she opens up about the sacrifice, mindset, and resilience it took to make the leap. Whether you're a parent, a career-changer, or simply need a...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-8-She-Broke-Into-tech-In-3-Months-e31dkmb"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-8-She-Broke-Into-tech-In-3-Months-e31dkmb",
+      "url": "https://youtu.be/7smzivyHNWM"
     },
     {
       "id": "s1-ep09",
@@ -125,9 +133,10 @@
       "title": "He Learnt To Code & Build His Own Tech Company",
       "category": "Career Pivot",
       "date": "Apr 25, 2025",
-      "description": "In this episode of Decoded Stories, I sat down with Noah—a full-stack developer and founder of Nexelum. Born in Nigeria, raised with faith and discipline, and educated in Kazakhstan. Noah shares how he went from teaching to learning how to code using a 21-day learning rule. We dive into his journey and how he broke into the industry, built his first product, and now leads a dev team in the UK...",
+      "description": "In this episode of Decoded Stories , I sat down with Noah-a full-stack developer and founder of Nexelum. Born in Nigeria, raised with faith and discipline, and educated in Kazakhstan. Noah shares how he went from teaching to learning how to code using a 21-day learning rule. We dive into his journey and how he broke into the industry, built his first product, and now leads a dev team in the UK...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-9-He-Learnt-To-Code--Build-His-Own-Tech-Company-e320e2j"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-1--Episode-9-He-Learnt-To-Code--Build-His-Own-Tech-Company-e320e2j",
+      "url": "https://youtu.be/hmev3cyVxw8"
     },
     {
       "id": "s1-ep10",
@@ -137,9 +146,10 @@
       "title": "She Helped 1,500+ People Learn Cloud Engineering",
       "category": "Mindset",
       "date": "May 9, 2025",
-      "description": "In this episode of Decoded Stories, we sit down with Shae, a powerhouse in the tech space who's helped over 1,500 people learn cloud engineering. From sharing job-ready skills to building community and confidence, Shae has become a go-to guide for aspiring cloud professionals. We talk about her journey, the challenges she overcame, and how she’s empowering the next generation of tech talent...",
+      "description": "In this episode of Decoded Stories , we sit down with Shae , a powerhouse in the tech space who's helped over 1,500 people learn cloud engineering . From sharing job-ready skills to building community and confidence, Shae has become a go-to guide for aspiring cloud professionals. We talk about her journey, the challenges she overcame, and how she’s empowering the next generation of tech talent,...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Finale--Season-1--Episode-10-She-Helped-1-500-People-Learn-Cloud-Engineering-e32keak"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Finale--Season-1--Episode-10-She-Helped-1-500-People-Learn-Cloud-Engineering-e32keak",
+      "url": "https://youtu.be/35tH5sFiYs8"
     },
     {
       "id": "s2-ep01",
@@ -149,7 +159,7 @@
       "title": "Chris Sean Gets Real About Failure, Tech, and Success",
       "category": "Resilience",
       "date": "Jul 11, 2025",
-      "description": "It’s here! Season 2 of Decoded Stories just dropped. In this episode, Chris Sean gets real about his journey from dropping out of college and sleeping in his car to building a six-figure tech career and a YouTube channel that inspires thousands. We unpack parts of his story he’s never shared before, lessons learned, what it really takes to break into tech when you’re at rock bottom, and so...",
+      "description": "It’s here! 🎙️🔥 Season 2 of Decoded Stories just dropped. In this episode, Chris Sean gets real about his journey from dropping out of college and sleeping in his car to building a six-figure tech career and a YouTube channel that inspires thousands. We unpack parts of his story he’s never shared before, lessons learned, what it really takes to break into tech when you’re at rock bottom, and so...",
       "image": "assets/thumb.jpg",
       "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-1-Chris-Sean-Gets-Real-About-Failure--Tech--and-Success-e35d4bt",
       "url": "https://youtu.be/k8y8BfqZgVg"
@@ -164,7 +174,8 @@
       "date": "Jul 25, 2025",
       "description": "In this episode, I sit down with Jubril, also known as Jubril Codes, to unpack his journey from Lagos, Nigeria, to working at Microsoft. We talk about his early struggles with imposter syndrome, studying software engineering in Malaysia and the U.S., and how he landed roles at the World Bank and Bank of America before reaching his current role at Microsoft. Jubril opens up about what it really...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-2-From-Lagos-to-Microsoft-e35vil7"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-2-From-Lagos-to-Microsoft-e35vil7",
+      "url": "https://youtu.be/HYpS2MaFHh4"
     },
     {
       "id": "s2-ep03",
@@ -187,9 +198,10 @@
       "title": "From Rejections to Tech Founder For Creatives",
       "category": "Personal Branding",
       "date": "Aug 22, 2025",
-      "description": "In this episode of Decoded Stories I sit down with Ferdinand Tettey, a software engineer, content creator, and founder of Creator Brand Hub, to talk about his tech journey. He shares how he went from growing up in Ghana, West Africa to figuring out life in New York, facing rejection after rejection while job hunting, and still pushing through to land his first big tech role. We talk about...",
+      "description": "In this episode of Decoded Stories I sit down with Ferdinand Tettey, a software engineer, content creator, and founder of Creator Brand Hub , to talk about his tech journey. He shares how he went from growing up in Ghana, West Africa to figuring out life in New York, facing rejection after rejection while job hunting, and still pushing through to land his first big tech role. We talk about...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-4-From-Rejections-to-Tech-Founder-For-Creatives-e376cdm"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-4-From-Rejections-to-Tech-Founder-For-Creatives-e376cdm",
+      "url": "https://youtu.be/vp-ZlNdTcmU"
     },
     {
       "id": "s2-ep05",
@@ -199,9 +211,10 @@
       "title": "From Door-to-Door to Tech Sales Executive By 23",
       "category": "Career Pivot",
       "date": "Sep 5, 2025",
-      "description": "In today’s episode of Decoded Stories, I sit down with Jarrett Albritton — VP of Strategy, $40M+ in software sales, and the creator of Big Tech Energy. Jarrett opens up about his journey from selling books door-to-door 80 hours a week, to asking IBM for the job with sheer confidence, to now building a platform that helps others step into their purpose.",
+      "description": "In today’s episode of Decoded Stories , I sit down with Jarrett Albritton — VP of Strategy, $40M+ in software sales, and the creator of Big Tech Energy . Jarrett opens up about his journey from selling books door-to-door 80 hours a week, to asking IBM for the job with sheer confidence, to now building a platform that helps others step into their purpose. We talk about: • How preparation creates...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-5-From-Door-to-Door-to-Tech-Sales-Executive-By-23-e37k1df"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-5-From-Door-to-Door-to-Tech-Sales-Executive-By-23-e37k1df",
+      "url": "https://youtu.be/jkqYmVAJ5og"
     },
     {
       "id": "s2-ep06",
@@ -211,7 +224,7 @@
       "title": "The Jack-Of-All-Trades in Tech",
       "category": "Career Pivot",
       "date": "Sep 19, 2025",
-      "description": "In this episode of Decoded Stories, I sit down with Travis Woods, an infrastructure engineer whose path to tech was anything but traditional. From studying nursing to building IT systems at ACM, Travis opens up about what it really means to be dynamic in your career. We talk about how jumping around early in your career can be a strength and why saying yes to new opportunities can open unexpected doors.",
+      "description": "In this episode of Decoded Stories , I sit down with Travis Woods , an infrastructure engineer whose path to tech was anything but traditional. From studying nursing to building IT systems at ACM, Travis opens up about what it really means to be dynamic in your career. We talk about: How jumping around early in your career can be a strength Why saying yes to new opportunities can open unexpected...",
       "image": "assets/thumb.jpg",
       "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-6-The-Jack-Of-All-Trades-in-Tech-e38eglq",
       "url": "https://youtu.be/WS3NroFIen0"
@@ -224,7 +237,7 @@
       "title": "How to Get Into Tech at Any Age (Lawrence Did It at 46)",
       "category": "Resilience",
       "date": "Oct 17, 2025",
-      "description": "In this episode of Decoded Stories, I sit down with Lawrence Lockhart — a man whose story redefines what perseverance, faith, and purpose look like. Lawrence landed his first dev role at 46 after spending nearly two decades in the restaurant industry. Today, he’s a Senior Developer Advocate, speaker, mentor, and voice of encouragement to thousands online.",
+      "description": "In this episode of Decoded Stories , I sit down with Lawrence Lockhart — a man whose story redefines what perseverance, faith, and purpose look like.Lawrence landed his first dev role at 46 after spending nearly two decades in the restaurant industry. Today, he’s a Senior Developer Advocate, speaker, mentor, and voice of encouragement to thousands online. We talk about: • How he went from...",
       "image": "assets/thumb.jpg",
       "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-7-How-to-Get-Into-Tech-at-Any-Age-Lawrence-Did-It-at-46-e39kdf9",
       "url": "https://youtu.be/33viVZCxBmY"
@@ -237,9 +250,10 @@
       "title": "From Uncertain to Unstoppable: Why She Pivoted from Web Dev to Data Analytics",
       "category": "Career Pivot",
       "date": "Oct 31, 2025",
-      "description": "Jessica started her journey into tech without a degree, landing roles in government tech and creative agencies as a front-end developer. But after experiencing postpartum and navigating life as a mom of three, she realized her heart was pulling her in a new direction — data analytics. We talk about breaking into tech with zero formal education, being a mother and a wife while pivoting careers.",
+      "description": "Jessica started her journey into tech without a degree, landing roles in government tech and creative agencies as a front-end developer. But after experiencing postpartum and navigating life as a mom of three, she realized her heart was pulling her in a new direction — data analytics. In this episode, we talk about: ﻿﻿• Breaking into tech with zero formal education ﻿﻿• Being a mother and a wife...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-8-From-Uncertain-to-Unstoppable-Why-She-Pivoted-from-Web-Dev-to-Data-Analytics-e3aal4k"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-8-From-Uncertain-to-Unstoppable-Why-She-Pivoted-from-Web-Dev-to-Data-Analytics-e3aal4k",
+      "url": "https://youtu.be/M4qsyn2cCLo"
     },
     {
       "id": "s2-ep09",
@@ -249,9 +263,10 @@
       "title": "From UPS to Gov Tech",
       "category": "Career Pivot",
       "date": "Nov 14, 2025",
-      "description": "In this episode, I sit down with Keith Foster, a SWE, husband and father, who went from stocking shelves and working odd jobs to landing a job in gov tech. We talk about how he found Harvard’s free CS50 course and made it count, why his wife Jessica helped drag him to tech meetups, and what it really takes to land that first role.",
+      "description": "In this episode, I sit down with Keith Foster , a SWE, husband and father, who went from stocking shelves and working odd jobs to landing a job in gov tech. We talk about: How he found Harvard’s free CS50 course and made it count Why his wife Jessica (also in tech!) helped drag him to tech meetups What it really takes to land that first role (and why most won’t make it) His first tech job offer...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-9-From-UPS-to-Gov-Tech-e3avuf4"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-2--Episode-9-From-UPS-to-Gov-Tech-e3avuf4",
+      "url": "https://youtu.be/g0tAYkYq5-Q"
     },
     {
       "id": "s2-ep10",
@@ -261,9 +276,10 @@
       "title": "The Power of Delayed Gratification",
       "category": "Mindset",
       "date": "Dec 5, 2025",
-      "description": "Season 2 Finale. In the finale of Season 2, I sit down with Disleve Kanku, a data engineer making serious moves in the AI space. From humble beginnings to earning a master’s in data analytics and now building smart cloud solutions, Disleve shares the mindset, grit, and delayed gratification it took to pivot into tech and win.",
+      "description": "Season 2 Finale – The Power of Delayed Gratification In the finale of Season 2, I sit down with Disleve Kanku, a data engineer making serious moves in the AI space. From humble beginnings to earning a master’s in data analytics and now building smart cloud solutions, Disleve shares the mindset, grit, and delayed gratification it took to pivot into tech and win. #DecodedStories #AnnorCode...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Finale--Season-2---Episode-10-The-Power-of-Delayed-Gratification-e3btm1g"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Finale--Season-2---Episode-10-The-Power-of-Delayed-Gratification-e3btm1g",
+      "url": "https://youtu.be/PJR04Otrpec"
     },
     {
       "id": "s3-ep01",
@@ -273,7 +289,7 @@
       "title": "He Built a Tech Career Without Making It His Identity",
       "category": "Career Pivot",
       "date": "Feb 6, 2026",
-      "description": "Byron’s career story is unconventional. He didn’t chase tech. He didn’t apply for most of the jobs he’s had. Opportunities came through relationships, faith, and moments of obedience that didn’t make sense at the time. In this conversation, we talk about growing up broke, being bullied, starting in help desk, navigating federal IT, cloud roles, marriage, and learning that a career can be your calling without becoming your identity.",
+      "description": "Byron’s career story is unconventional. He didn’t chase tech. He didn’t apply for most of the jobs he’s had. Opportunities came through relationships, faith, and moments of obedience that didn’t make sense at the time. In this conversation, we talk about growing up broke, being bullied, starting in help desk, navigating federal IT, cloud roles, marriage, and learning that a career can be your...",
       "image": "assets/thumb.jpg",
       "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-1-He-Built-a-Tech-Career-Without-Making-It-His-Identity-e3ejmib",
       "url": "https://youtu.be/wO-2MrJ5LoM"
@@ -288,7 +304,8 @@
       "date": "Feb 20, 2026",
       "description": "Tech isn't dead. The mindset is. Juwon breaks down what it actually takes to break into tech in today's market, the rejections, the mindset shifts, and the discipline behind it all.",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Tech-Aint-Dead-The-Truth-About-Getting-Hired-Right-Now-e3fbg9n"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Tech-Aint-Dead-The-Truth-About-Getting-Hired-Right-Now-e3fbg9n",
+      "url": "https://youtu.be/onDLyy3gtuo"
     },
     {
       "id": "s3-ep03",
@@ -298,7 +315,7 @@
       "title": "Don't Dim Yourself To Fit In",
       "category": "Personal Branding",
       "date": "Mar 6, 2026",
-      "description": "In this episode of Decoded Stories, Bree Hall shares her journey into tech and what it’s been like to navigate the industry as a Black woman and software engineer. We discuss her not fitting in growing up, learning to stop dimming yourself for others, and finding confidence in who you are. Bree also opens up about the challenges she faced early in her career, the importance of community and how content creation ended up changing her life.",
+      "description": "In this episode of Decoded Stories, Bree Hall shares her journey into tech and what it’s been like to navigate the industry as a Black woman and software engineer. We discuss her not fitting in growing up, learning to stop dimming yourself for others, and finding confidence in who you are. Bree also opens up about the challenges she faced early in her career, the importance of community and...",
       "image": "assets/thumb.jpg",
       "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-3-Dont-Dim-Yourself-To-Fit-In-e3g1ksb",
       "url": "https://youtu.be/JOQJn2BfQBQ"
@@ -311,9 +328,10 @@
       "title": "What Hiring Managers Won't Tell You",
       "category": "Career Pivot",
       "date": "Mar 20, 2026",
-      "description": "In this episode of Decoded Stories, I sat down with Sahana, an engineering manager who’s built across startups, led teams, and now shares her journey online. We discussed the challenges and triumphs of being a woman in tech, the importance of supportive leadership, work-life balance, and the realities of navigating the tech industry, including layoffs and startup culture.",
+      "description": "In this episode of Decoded Stories, I sat down with Sahana, an engineering manager who’s built across startups, led teams, and now shares her journey online. We discussed the challenges and triumphs of being a woman in tech. She emphasizes the importance of supportive leadership, work-life balance, and the realities of navigating the tech industry, including layoffs and the startup culture. She...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-4-What-Hiring-Managers-Wont-Tell-You-e3gne15"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-4-What-Hiring-Managers-Wont-Tell-You-e3gne15",
+      "url": "https://youtu.be/g9RHEENAw70"
     },
     {
       "id": "s3-ep05",
@@ -323,7 +341,7 @@
       "title": "How I'm Retiring in My 30s: The Truth About Tech Money Nobody Tells You",
       "category": "Mindset",
       "date": "Apr 3, 2026",
-      "description": "Ever wonder what it REALLY takes to retire young in tech? Derrick breaks down his journey from applying to 400+ jobs out of college to becoming a principal cyber consultant planning retirement in his 30s. He shares the strategies nobody talks about: why imbalance beats balance, how he turned house savings into $350K in 8 months, and what financial freedom actually looks like in tech.",
+      "description": "Ever wonder what it REALLY takes to retire young in tech? This episode isn't your typical career advice; It's raw truth from someone who's done it. Derrick breaks down his journey from applying to 400+ jobs out of college to becoming a principal cyber consultant planning retirement in his 30s. He shares the strategies nobody talks about: why imbalance beats balance, how he turned house savings...",
       "image": "assets/thumb.jpg",
       "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-5-How-Im-Retiring-in-My-30s-The-Truth-About-Tech-Money-Nobody-Tells-You-e3hcanh",
       "url": "https://youtu.be/0lRQozM7JyY"
@@ -333,24 +351,26 @@
       "season": 3,
       "episodeLabel": "Episode 6",
       "guest": "Haji",
-      "title": "The Village Didn't Raise No Quitter",
+      "title": "The village didn’t raise no quitter",
       "category": "Resilience",
       "date": "Apr 17, 2026",
-      "description": "What does it really take to break into tech when you're starting from zero? Not just zero experience, but zero language, zero connections, and people laughing at you every step of the way? Haji breaks down his journey from growing up in a Gambian village to relearning English at 15 in the States, to becoming a DevOps engineer, bombing 90% of his interviews, and landing two job offers in the same week.",
+      "description": "What does it really take to break into tech when you're starting from zero? Not just zero experience, but zero language, zero connections, and people laughing at you every step of the way? Haji breaks down his journey from growing up in a Gambian village to relearning English at 15 in the States, to becoming a DevOps engineer at a telecom company in New Jersey. He shares the raw truth about...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-6-The-village-didnt-raise-no-quitter-e3htlid"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-6-The-village-didnt-raise-no-quitter-e3htlid",
+      "url": "https://youtu.be/bGsqf-OgH98"
     },
     {
       "id": "s3-ep07",
       "season": 3,
       "episodeLabel": "Episode 7",
       "guest": "Ari",
-      "title": "From Music Producer to Cybersecurity: How She Pivoted Careers",
+      "title": "From Music Producer to Cybersecurity: How she Pivoted Careers",
       "category": "Career Pivot",
       "date": "May 1, 2026",
-      "description": "Ever wonder what it takes to completely pivot your career from one passion to something entirely different? Ari went from Berklee College of Music on a full ride scholarship to becoming a cybersecurity professional with an active government security clearance. She breaks down her journey from music production to cybersecurity and what that transition actually looked like.",
+      "description": "Ever wonder what it takes to completely pivot your career from one passion to something entirely different? Ari went from Berklee College of Music on a full ride scholarship to becoming a cybersecurity professional with an active government security clearance. She breaks down her journey from being a music production major working with top producers and getting songs pitched to major artists, to...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-7-From-Music-Producer-to-Cybersecurity-How-she-Pivoted-Careers-e3ifjeo"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-7-From-Music-Producer-to-Cybersecurity-How-she-Pivoted-Careers-e3ifjeo",
+      "url": "https://youtu.be/PqLXZrs8da8"
     },
     {
       "id": "s3-ep08",
@@ -360,9 +380,10 @@
       "title": "I Got to Interview My First Tech Professor - Full Circle Moment",
       "category": "Discipline & Growth",
       "date": "May 15, 2026",
-      "description": "Years ago, I walked into Dr. Samuel K. Boateng's cybersecurity class knowing absolutely nothing about tech. I couldn't even afford to pay for the course, but he told me, 'Just pay what you can and keep learning.' That moment changed my life. In this episode, I sit down with Dr. Samuel K. Boateng, my first IT professor and the founder of Slam Technologies.",
+      "description": "Years ago, I walked into Dr. Samuel K. Boateng's cybersecurity class knowing absolutely nothing about tech. I couldn't even afford to pay for the course, but he told me, \"Just pay what you can and keep learning.\" That moment changed my life. In this episode, I sit down with Dr. Samuel K. Boateng, my first IT professor and the founder of Slam Technologies. We talk about my journey from struggling...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-8-I-Got-to-Interview-My-First-Tech-Professor---Full-Circle-Moment-e3jacup"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-8-I-Got-to-Interview-My-First-Tech-Professor---Full-Circle-Moment-e3jacup",
+      "url": "https://youtu.be/yINMzSwlZr0"
     },
     {
       "id": "s3-ep09",
@@ -372,9 +393,10 @@
       "title": "You're Made for More: Change Your Mindset",
       "category": "Mindset",
       "date": "May 29, 2026",
-      "description": "David came to America from Nigeria at 23 with big dreams. He wanted FAANG. He wanted Mercedes. He wanted it all. But his mindset and the people he surrounded himself with made him put a cap on how far he knew he could go. We talk about growing up as a pastor's kid in Nigeria, being laid off twice, moving to Texas on faith, and the moment that changed everything.",
+      "description": "David came to America from Nigeria at 23 with big dreams. He wanted FAANG. He wanted Mercedes. He wanted it all. But his mindset and the people he surrounded himself with made him put a cap as to how far he knew he could go. In this episode, we talk about growing up as a pastor's kid in Nigeria who was literally the worst version of himself—sneaking alcohol to school, playing video games instead...",
       "image": "assets/thumb.jpg",
-      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-9-Youre-Made-for-More-Change-Your-Mindset-e3k20j1"
+      "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Season-3--Episode-9-Youre-Made-for-More-Change-Your-Mindset-e3k20j1",
+      "url": "https://youtu.be/t-gh1EGtB8k"
     },
     {
       "id": "s3-ep10",
@@ -384,17 +406,15 @@
       "title": "She Left Github To Build Her Own Empire",
       "category": "Career Pivot",
       "date": "Jun 19, 2026",
-      "description": "Kedasha grew up in poverty in Jamaica, came to the US for college, and got kicked out by her stepdad right after graduating. She talks through all of it in this one. The culture shock, homelessness, figuring life out on her own. She breaks down how she found coding through an Instagram post, taught herself to code while working three jobs, went from social worker to developer advocate at GitHub, then left to build her own business full time.",
+      "description": "Kedasha grew up in poverty in Jamaica, came to the US for college, and got kicked out by her stepdad right after graduating. She talks through all of it in this one. The culture shock of moving here, the lack of manners she couldn't get used to, what it actually felt like to be homeless and figure life out on her own. She breaks down how she found coding through an Instagram post, taught herself...",
       "image": "assets/thumb.jpg",
       "spotifyUrl": "https://podcasters.spotify.com/pod/show/annor--code/episodes/Finale--Season-3--Episode-10-She-Left-Github-To-Build-Her-Own-Empire-e3l0bmv",
       "url": "https://youtu.be/WAf6Qs2FmBY"
     }
   ],
   "notes": [
-    "All 30 episodes now populated from the real RSS feed (Season 1: 10 episodes, Season 2: 10 episodes, Season 3: 10 episodes).",
-    "8 episodes have real YouTube 'url' fields (s2-ep01, s2-ep03, s2-ep06, s2-ep07, s3-ep01, s3-ep03, s3-ep05, s3-ep10). The remaining 22 episodes need their YouTube links added the same way once available.",
-    "Every episode has a real 'spotifyUrl' field pulled directly from the RSS feed — these are the actual per-episode Spotify links, not just the show-level page. Card platform icon logic uses spotifyUrl per-episode.",
-    "Every episode still uses assets/thumb.jpg as a placeholder image — swap in real per-episode art as it becomes available.",
-    "Descriptions are trimmed/truncated versions of the real show notes pulled from the RSS feed."
+    "All 30 episodes now have both a real spotifyUrl AND a real YouTube url field — every episode is fully linked on both platforms.",
+    "Every episode still uses assets/thumb.jpg as a placeholder image — real per-episode thumbnails are the next step.",
+    "Apple Podcasts is still not live — keep showing it as 'soon' everywhere."
   ]
 }
