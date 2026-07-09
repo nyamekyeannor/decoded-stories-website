@@ -24,7 +24,8 @@
       "guest": "Kedasha",
       "title": "Walking Away From a Dream Job to Build Something of Her Own",
       "category": "Career Pivot",
-      "description": "On leaving a dream job at GitHub, betting on herself, and what it actually feels like the morning after you quit."
+      "description": "On leaving a dream job at GitHub, betting on herself, and what it actually feels like the morning after you quit.",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep08",
@@ -33,25 +34,28 @@
       "guest": "David Odeleye",
       "title": "Owning the Story You Tell About Your Work",
       "category": "Personal Branding",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep07",
       "season": 3,
       "episodeLabel": "Episode 7",
       "guest": "Dr. Samuel K. Boateng",
-      "title": "The Discipline Behind Every \"Overnight Success\"",
+      "title": "The Discipline Behind Every “Overnight Success”",
       "category": "Discipline & Growth",
-      "description": "A conversation on research, resilience, and building a career nobody hands you a roadmap for."
+      "description": "A conversation on research, resilience, and building a career nobody hands you a roadmap for.",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep06",
       "season": 3,
       "episodeLabel": "Episode 6",
       "guest": "Ari",
-      "title": "Finding Your Lane When Everyone's Loud Online",
+      "title": "Finding Your Lane When Everyone’s Loud Online",
       "category": "Creative Identity",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep05",
@@ -60,7 +64,8 @@
       "guest": "Haji",
       "title": "Rebuilding Confidence After a Rough Career Chapter",
       "category": "Resilience",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep04",
@@ -69,7 +74,8 @@
       "guest": "Derrick",
       "title": "The Long Road In, No Shortcuts Included",
       "category": "Career Pivot",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep03",
@@ -78,7 +84,8 @@
       "guest": "Sahana",
       "title": "Betting on Yourself Before Anyone Else Does",
       "category": "Self-Belief",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep02",
@@ -87,7 +94,8 @@
       "guest": "Bree Hall",
       "title": "Building an Audience Without Losing Yourself",
       "category": "Personal Branding",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s3-ep01",
@@ -96,7 +104,8 @@
       "guest": "Byron Horne",
       "title": "Season 3 Kickoff: What Changed This Year",
       "category": "Behind the Scenes",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s2-finale",
@@ -105,7 +114,8 @@
       "guest": "Disleve Kanku",
       "title": "Delayed Gratification in a Get-Rich-Quick World",
       "category": "Mindset",
-      "description": "The Season 2 finale on patience, long games, and why the shortcut rarely holds up."
+      "description": "The Season 2 finale on patience, long games, and why the shortcut rarely holds up.",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s2-ep09",
@@ -114,7 +124,8 @@
       "guest": "Keith Foster",
       "title": "From UPS to Government Tech",
       "category": "Career Pivot",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     },
     {
       "id": "s1-trailer",
@@ -123,12 +134,14 @@
       "guest": "AnnorCode",
       "title": "The Beginning of Decoded Stories — Why I Started a Podcast",
       "category": "Origin Story",
-      "description": ""
+      "description": "",
+      "image": "assets/thumb.jpg"
     }
   ],
   "notes": [
     "Season 2 episodes 1-8 are on Spotify but weren't pulled into this file yet — grab those from Spotify for Creators before the build if you want the full archive.",
     "Empty description fields need the real show notes pulled in, or can stay blank and just show the title.",
-    "Every episode currently points at placeholder thumbnails (thumb.jpg) — swap in real per-episode art as you get it."
+    "To add real per-episode art: update the 'image' field on any episode to the correct path (e.g. 'assets/episodes/s3-ep09.jpg').",
+    "To add a direct episode link: add a 'url' field to any episode object (e.g. 'url': 'https://open.spotify.com/episode/...'). Cards fall back to the show Spotify URL if no url field is set."
   ]
 }
