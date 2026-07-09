@@ -7,7 +7,8 @@
   <meta name="description" content="A podcast for creators and tech professionals about the real journeys behind the career, the pivots, the setbacks, and the moments that actually shaped who they became.">
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #FFFFFF;
@@ -25,6 +26,7 @@
       --brand: #F0A430;
       --charcoal: #2B2B31;
       --font: 'Inter', -apple-system, sans-serif;
+      --font-heading: 'Fraunces', serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -128,8 +130,9 @@
     .hero-eyebrow { font-size: 15px; color: var(--muted); margin-bottom: 6px; }
     .hero-eyebrow strong { color: var(--text); font-weight: 800; }
     .hero h1 {
-      font-size: clamp(42px, 6vw, 68px);
-      font-weight: 900; letter-spacing: -0.02em; line-height: 1.0; margin-bottom: 18px;
+      font-family: var(--font-heading);
+      font-size: clamp(52px, 7vw, 84px);
+      font-weight: 900; letter-spacing: -0.01em; line-height: 1.05; margin-bottom: 18px;
     }
     .hero h1 .brand { color: var(--brand); }
     .hero-desc { color: var(--muted); font-size: 17px; max-width: 480px; }
@@ -171,7 +174,7 @@
       display: flex; justify-content: space-between; align-items: flex-end;
       margin-bottom: 40px; gap: 24px; flex-wrap: wrap;
     }
-    .section-head h2 { font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; letter-spacing: -0.01em; }
+    .section-head h2 { font-family: var(--font-heading); font-size: clamp(32px, 5vw, 49.4528px); font-weight: 700; letter-spacing: 0; }
     .section-desc { color: var(--muted); max-width: 420px; font-size: 15px; }
     .view-all { font-size: 14px; font-weight: 700; color: var(--accent-dark); white-space: nowrap; }
     .view-all:hover { text-decoration: underline; }
@@ -179,14 +182,14 @@
     /* ---------- FEATURED CAROUSEL ---------- */
     .carousel-nav { display: flex; align-items: center; gap: 10px; }
     .carousel-btn {
-      width: 48px; height: 48px; border-radius: 50%;
+      width: 60px; height: 60px; border-radius: 50%;
       border: none; background: var(--accent); color: var(--charcoal);
       cursor: pointer; display: flex; align-items: center; justify-content: center;
       transition: background .2s, transform .2s, box-shadow .2s, opacity .2s;
       flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(20,20,25,0.10);
     }
-    .carousel-btn svg { width: 20px; height: 20px; pointer-events: none; stroke-width: 2.5; }
+    .carousel-btn svg { width: 26px; height: 26px; pointer-events: none; stroke-width: 2.5; }
     .carousel-btn:hover:not(:disabled) {
       background: var(--accent-dark);
       transform: translateY(-2px);
@@ -197,23 +200,32 @@
     .featured-carousel {
       display: flex; gap: 24px;
       overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; padding-bottom: 12px;
+      scrollbar-width: none; padding-bottom: 16px;
+      /* break out of .wrap to bleed edge-to-edge */
+      padding-left: max(28px, calc((100vw - 1140px) / 2 + 28px));
+      padding-right: max(28px, calc((100vw - 1140px) / 2 + 28px));
+      cursor: grab;
     }
     .featured-carousel::-webkit-scrollbar { display: none; }
-    .featured-carousel .ep-card { flex: 0 0 300px; }
+    .featured-carousel.is-dragging { scroll-behavior: auto; cursor: grabbing; user-select: none; }
+    .featured-carousel .ep-card { flex: 0 0 450px; }
+    .featured-carousel .ep-card .ep-thumb { aspect-ratio: 16 / 9; margin-bottom: 16px; }
+    .featured-carousel .ep-card .ep-title { font-size: 20px; line-height: 1.3; margin-bottom: 14px; }
 
     .ep-card {
-      display: block;
+      display: flex; flex-direction: column;
       background: var(--bg-alt);
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 12px 12px 16px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
     .ep-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 28px rgba(20,20,25,0.1);
     }
+    .featured-carousel .ep-card:hover { background: var(--accent-tint); }
+    .recent-grid .ep-card { padding: 16px 16px 20px; }
     .ep-thumb {
       display: block;
       aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #eee;
@@ -224,35 +236,10 @@
       transition: transform .35s;
     }
     .ep-card:hover .ep-thumb img { transform: scale(1.04); }
-    .ep-date { font-size: 12.5px; color: var(--muted-2); font-weight: 600; margin-bottom: 6px; }
+    .ep-date { font-size: 12.5px; color: var(--muted-2); font-weight: 600; margin-bottom: 10px; }
     .ep-title { font-size: 16.5px; font-weight: 700; line-height: 1.35; margin-bottom: 10px; }
-
-    /* ---------- CARD PLATFORM ICONS ---------- */
-    .ep-platforms {
-      display: flex; align-items: center; gap: 8px;
-      margin-top: 10px; padding-top: 10px;
-      border-top: 1px solid var(--border);
-    }
-    .ep-plat-link {
-      display: flex; align-items: center;
-      text-decoration: none;
-    }
-    .ep-plat-icon {
-      width: 28px; height: 28px; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      transition: transform .18s ease, opacity .18s ease;
-    }
-    .ep-plat-icon svg { width: 15px; height: 15px; }
-    .ep-plat-link:hover .ep-plat-icon { transform: scale(1.14); }
-    .ep-plat-apple {
-      display: flex; align-items: center; gap: 5px;
-      opacity: 0.38; cursor: default; user-select: none;
-    }
-    .ep-plat-soon {
-      font-size: 9.5px; font-weight: 700; color: var(--muted-2);
-      letter-spacing: 0.03em; text-transform: uppercase;
-    }
+    .ep-view { font-size: 15.5px; font-weight: 500; color: var(--text); display: inline-block; text-decoration: underline; text-underline-offset: 0.18em; margin-top: auto; padding-top: 16px; }
+    .ep-view:hover { opacity: 0.65; }
 
     /* ---------- RECENT EPISODES ---------- */
     .tab-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
@@ -268,7 +255,7 @@
     @media (max-width: 900px) { .recent-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .recent-grid { grid-template-columns: 1fr; } }
     .recent-grid .ep-card { display: none; }
-    .recent-grid .ep-card.visible { display: block; }
+    .recent-grid .ep-card.visible { display: flex; }
 
     .load-more-wrap { display: flex; justify-content: center; margin-top: 44px; }
     .load-more-btn {
@@ -287,6 +274,7 @@
       border: 1px solid var(--border); background: #eee;
     }
     .about-photo img { width: 100%; height: auto; display: block; }
+    .about-text h2 { font-family: var(--font-heading); letter-spacing: 0; }
     .about-text p { color: var(--muted); font-size: 16px; margin-bottom: 16px; }
     .about-text strong { color: var(--text); }
     .about-stats { display: flex; gap: 40px; margin-top: 26px; flex-wrap: wrap; }
@@ -299,7 +287,7 @@
       padding: 52px 44px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center;
     }
     @media (max-width: 800px) { .newsletter-box { grid-template-columns: 1fr; padding: 36px 26px; } }
-    .newsletter-box h2 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 900; letter-spacing: -0.01em; }
+    .newsletter-box h2 { font-family: var(--font-heading); font-size: clamp(28px, 4vw, 40px); font-weight: 900; letter-spacing: 0; }
     .newsletter-box p { color: var(--muted); margin-top: 14px; font-size: 15px; max-width: 420px; }
     .nl-form { display: flex; gap: 10px; flex-wrap: wrap; }
     .nl-form input {
@@ -322,7 +310,7 @@
       background: var(--accent-tint); border: 1px solid #F3E2BC;
       border-radius: 20px; padding: 60px 40px; text-align: center;
     }
-    .guest-banner h3 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 800; margin-bottom: 14px; }
+    .guest-banner h3 { font-family: var(--font-heading); font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 14px; letter-spacing: 0; }
     .guest-banner p { color: var(--muted); max-width: 480px; margin: 0 auto 28px; font-size: 15.5px; }
     .btn-accent {
       font-weight: 700; font-size: 14.5px;
@@ -330,6 +318,23 @@
       border-radius: 24px; display: inline-block; border: none; cursor: pointer; transition: background .2s;
     }
     .btn-accent:hover { background: var(--accent-dark); }
+    .about-cta-pill { display: inline-block; background: var(--accent); color: var(--charcoal); font-size: 13px; font-weight: 700; padding: 8px 18px; border-radius: 20px; margin-top: 12px; transition: background .2s; }
+    .about-cta-pill:hover { background: var(--accent-dark); }
+    .guest-form { width: 100%; max-width: 480px; margin: 0 auto; text-align: left; }
+    .guest-form .gf-field { margin-bottom: 16px; }
+    .guest-form label { display: block; font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .guest-form input {
+      width: 100%; background: #fff; box-sizing: border-box;
+      border: 1.5px solid var(--border); border-radius: 24px;
+      padding: 14px 20px; color: var(--text); font-family: var(--font); font-size: 14.5px;
+    }
+    .guest-form input::placeholder { color: var(--muted-2); }
+    .guest-form input:focus { outline: none; border-color: var(--accent-dark); }
+    .guest-form .btn-accent { width: 100%; margin-top: 8px; text-align: center; }
+    .guest-success { display: none; text-align: center; padding: 60px 40px; }
+    .guest-success h3 { font-family: var(--font-heading); font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: 0; margin-bottom: 16px; color: var(--text); }
+    .guest-success p { color: var(--muted); font-size: 15.5px; }
+    .gf-error { display: none; font-size: 13px; color: #C0392B; margin-top: 6px; }
 
     /* ---------- FOOTER ---------- */
     footer { border-top: 1px solid var(--border); padding: 56px 0 32px; background: var(--bg-alt); }
@@ -409,9 +414,9 @@
         </button>
       </div>
     </div>
-    <div class="featured-carousel" id="featuredGrid">
-      <!-- filled by JS from episodes.json -->
-    </div>
+  </div>
+  <div class="featured-carousel" id="featuredGrid">
+    <!-- filled by JS from episodes.json -->
   </div>
 </section>
 
@@ -445,23 +450,21 @@
       </div>
       <div class="about-text">
         <div class="hero-eyebrow">About the host</div>
-        <h2 style="font-size:clamp(26px,4vw,36px);font-weight:900;margin-bottom:20px;letter-spacing:-0.01em;">Hey, I&#8217;m Nyamekye</h2>
-        <p>I&#8217;m a <strong>front-end engineer and QA analyst</strong> by day, and the host of Decoded Stories, where I sit down with creators, developers, and tech professionals to talk about the stories behind their careers.</p>
-        <p>Every episode digs into the real journey. The pivots, the setbacks, the moments nobody posts about that actually lead to growth. Less highlight reel, more honest conversation.</p>
-        <p>Outside the mic, I build things under the name <strong>AnnorCode</strong>. Based in the DC area.</p>
-        <p>Got a story worth telling? I want to hear it.</p>
+        <h2 style="font-size:clamp(32px,4.5vw,46px);font-weight:900;margin-bottom:20px;letter-spacing:0;">Hey, I&#8217;m Nyamekye</h2>
+        <p>Hey, I&#8217;m Nyamekye. I&#8217;ve always been the kind of person who&#8217;s curious about people, who loves asking the questions nobody else asks. Storytelling never dies, and I built this whole show around one belief: People are so much more interesting than their job titles.</p>
+        <p>I started Decoded Stories because people once sat with me and shared their stories, and it changed how I saw what was possible for my own life.</p>
+        <p>By the end of most conversations, guests tell me the same thing: It felt less like an interview and more like a free therapy session. I&#8217;ll take it. We&#8217;re decoding your story, and apparently, healing a little along the way too.</p>
+        <p>We&#8217;re never just one thing. I&#8217;m here to decode the rest.</p>
+        <p>Ready to be decoded? I want to hear it.</p>
+        <a href="#guest" class="about-cta-pill">Share Your Story →</a>
         <div class="about-stats">
           <div>
-            <div class="stat-num">03</div>
-            <div class="stat-label">Seasons</div>
-          </div>
-          <div>
-            <div class="stat-num">20+</div>
+            <div class="stat-num">30+</div>
             <div class="stat-label">Guests</div>
           </div>
           <div>
-            <div class="stat-num">02</div>
-            <div class="stat-label">Platforms &amp; growing</div>
+            <div class="stat-num">03</div>
+            <div class="stat-label">Seasons</div>
           </div>
         </div>
       </div>
@@ -491,10 +494,31 @@
 <!-- BE A GUEST -->
 <section class="alt" id="guest">
   <div class="wrap">
-    <div class="guest-banner reveal">
-      <h3>Got a Story Worth Sharing?</h3>
-      <p>If you&#8217;ve got a career pivot, a hard-won lesson, or a journey worth talking about, I want to hear it. Tell me a bit about yourself and we&#8217;ll take it from there.</p>
-      <a href="mailto:annorcode@gmail.com" class="btn-accent">Request to Be a Guest</a>
+    <div class="guest-banner reveal" id="guestBanner">
+      <h3>Be a Guest</h3>
+      <p>I would love to decode your story. Drop your name and Instagram below, and let&#8217;s start decoding.</p>
+      <form class="guest-form" id="guestForm" name="guest-request" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="guest-request">
+        <p hidden><label>Don&#8217;t fill this out: <input name="bot-field"></label></p>
+        <div class="gf-field">
+          <label for="gf-name">Name</label>
+          <input type="text" id="gf-name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="gf-field">
+          <label for="gf-email">Email</label>
+          <input type="email" id="gf-email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="gf-field">
+          <label for="gf-social">Social Media</label>
+          <input type="text" id="gf-social" name="instagram" placeholder="Paste your social media link">
+          <div class="gf-error" id="gf-social-error">Please paste a valid link to your Instagram, TikTok, LinkedIn, or other social profile.</div>
+        </div>
+        <button type="submit" class="btn-accent">Submit Request</button>
+      </form>
+    </div>
+    <div class="guest-success" id="guestSuccess">
+      <h3>You&#8217;re In!</h3>
+      <p>Thanks for reaching out. I can&#8217;t wait to decode your story.</p>
     </div>
   </div>
 </section>
@@ -557,29 +581,14 @@
     const primaryHref = ep.url || epSpotify || '#';
     const dataAttr = isFeatured ? '' : ` data-season="${ep.season}"`;
 
-    const spotifyIcon = epSpotify
-      ? `<a href="${escHtml(epSpotify)}" class="ep-plat-link" target="_blank" rel="noopener noreferrer" aria-label="Listen on Spotify" title="Listen on Spotify"><span class="ep-plat-icon icon-spotify">${SPOTIFY_SVG}</span></a>`
-      : '';
-
-    const youtubeIcon = ep.url
-      ? `<a href="${escHtml(ep.url)}" class="ep-plat-link" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube" title="Watch on YouTube"><span class="ep-plat-icon icon-youtube">${YOUTUBE_SVG}</span></a>`
-      : '';
-
-    const appleIcon = `<span class="ep-plat-apple" title="Apple Podcasts — coming soon"><span class="ep-plat-icon icon-apple">${APPLE_SVG}</span><span class="ep-plat-soon">soon</span></span>`;
-
     return `
       <div class="ep-card"${dataAttr}>
         <a href="${escHtml(primaryHref)}" class="ep-thumb" target="_blank" rel="noopener noreferrer">
           <img src="${escHtml(ep.image)}" alt="${escHtml(ep.title)} thumbnail" loading="lazy">
         </a>
         <div class="ep-date">${escHtml(seasonLabel(ep))}</div>
-        <div class="ep-cat">${escHtml(ep.category)}</div>
         <div class="ep-title">${escHtml(ep.title)} &ndash; ${escHtml(ep.guest)}</div>
-        <div class="ep-platforms">
-          ${spotifyIcon}
-          ${youtubeIcon}
-          ${appleIcon}
-        </div>
+        <a href="${escHtml(primaryHref)}" class="ep-view" target="_blank" rel="noopener noreferrer">Listen Now →</a>
       </div>`;
   }
 
@@ -652,7 +661,7 @@
     initScrollReveal();
   }
 
-  /* Featured carousel arrows */
+  /* Featured carousel — arrows + drag-to-scroll */
   function initFeaturedCarousel() {
     const carousel = document.getElementById('featuredGrid');
     const prev = document.getElementById('featuredPrev');
@@ -661,7 +670,7 @@
 
     function scrollAmount() {
       const card = carousel.querySelector('.ep-card');
-      return card ? card.offsetWidth + 24 : 324; // card width + gap
+      return card ? card.offsetWidth + 24 : 384;
     }
 
     function updateArrows() {
@@ -673,6 +682,48 @@
     next.addEventListener('click', () => carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
     carousel.addEventListener('scroll', updateArrows, { passive: true });
     updateArrows();
+
+    /* Drag-to-scroll */
+    let isDragging = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let hasMoved = false;
+
+    carousel.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      hasMoved = false;
+      startX = e.pageX;
+      startScrollLeft = carousel.scrollLeft;
+      carousel.classList.add('is-dragging');
+      e.preventDefault(); // block text/image selection start
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const dx = e.pageX - startX;
+      if (Math.abs(dx) > 5) hasMoved = true;
+      carousel.scrollLeft = startScrollLeft - dx;
+    });
+
+    const stopDrag = () => {
+      if (!isDragging) return;
+      isDragging = false;
+      carousel.classList.remove('is-dragging');
+    };
+
+    document.addEventListener('mouseup', stopDrag);
+
+    // Block card link navigation if the mouse moved significantly during drag
+    carousel.addEventListener('click', (e) => {
+      if (hasMoved) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        hasMoved = false;
+      }
+    }, true);
+
+    // Prevent browser native image/link drag from hijacking the gesture
+    carousel.addEventListener('dragstart', (e) => e.preventDefault());
   }
 
   /* Season tabs + Load More */
@@ -735,6 +786,44 @@
   document.querySelectorAll('.nav-links a').forEach(a =>
     a.addEventListener('click', () => navLinks.classList.remove('open'))
   );
+
+  /* Guest form — AJAX submission for Netlify Forms */
+  const guestForm = document.getElementById('guestForm');
+  const guestBanner = document.getElementById('guestBanner');
+  const guestSuccess = document.getElementById('guestSuccess');
+  if (guestForm) {
+    const SOCIAL_DOMAINS = ['instagram.com','tiktok.com','linkedin.com','x.com','twitter.com','youtube.com','threads.net','facebook.com'];
+    function validSocialUrl(val) {
+      try {
+        const url = new URL(val.trim());
+        return (url.protocol === 'http:' || url.protocol === 'https:') &&
+          SOCIAL_DOMAINS.some(d => url.hostname === d || url.hostname.endsWith('.' + d));
+      } catch (_) { return false; }
+    }
+    const socialInput = document.getElementById('gf-social');
+    const socialError = document.getElementById('gf-social-error');
+    guestForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const socialVal = socialInput.value.trim();
+      if (socialVal && !validSocialUrl(socialVal)) {
+        socialError.style.display = 'block';
+        socialInput.focus();
+        return;
+      }
+      socialError.style.display = 'none';
+      const body = new URLSearchParams(new FormData(guestForm)).toString();
+      try {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body,
+        });
+      } catch (_) { /* submission only works on live Netlify deploy */ }
+      guestBanner.style.display = 'none';
+      guestSuccess.style.display = 'block';
+    });
+    socialInput.addEventListener('input', () => { socialError.style.display = 'none'; });
+  }
 
   init();
 </script>
