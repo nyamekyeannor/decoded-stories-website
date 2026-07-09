@@ -176,10 +176,31 @@
     .view-all { font-size: 14px; font-weight: 700; color: var(--accent-dark); white-space: nowrap; }
     .view-all:hover { text-decoration: underline; }
 
-    /* ---------- FEATURED EPISODES ---------- */
-    .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 28px; }
-    @media (max-width: 900px) { .featured-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px) { .featured-grid { grid-template-columns: 1fr; } }
+    /* ---------- FEATURED CAROUSEL ---------- */
+    .carousel-nav { display: flex; align-items: center; gap: 10px; }
+    .carousel-btn {
+      width: 48px; height: 48px; border-radius: 50%;
+      border: none; background: var(--accent); color: var(--charcoal);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background .2s, transform .2s, box-shadow .2s, opacity .2s;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(20,20,25,0.10);
+    }
+    .carousel-btn svg { width: 20px; height: 20px; pointer-events: none; stroke-width: 2.5; }
+    .carousel-btn:hover:not(:disabled) {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20,20,25,0.15);
+    }
+    .carousel-btn:disabled { opacity: 0.28; cursor: default; }
+
+    .featured-carousel {
+      display: flex; gap: 24px;
+      overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; padding-bottom: 12px;
+    }
+    .featured-carousel::-webkit-scrollbar { display: none; }
+    .featured-carousel .ep-card { flex: 0 0 300px; }
 
     .ep-card {
       display: block;
@@ -194,6 +215,7 @@
       box-shadow: 0 10px 28px rgba(20,20,25,0.1);
     }
     .ep-thumb {
+      display: block;
       aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #eee;
       border: 1px solid var(--border); margin-bottom: 14px;
     }
@@ -204,8 +226,33 @@
     .ep-card:hover .ep-thumb img { transform: scale(1.04); }
     .ep-date { font-size: 12.5px; color: var(--muted-2); font-weight: 600; margin-bottom: 6px; }
     .ep-title { font-size: 16.5px; font-weight: 700; line-height: 1.35; margin-bottom: 10px; }
-    .ep-view { font-size: 13.5px; font-weight: 700; color: var(--accent-dark); }
-    .ep-view:hover { text-decoration: underline; }
+
+    /* ---------- CARD PLATFORM ICONS ---------- */
+    .ep-platforms {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 10px; padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .ep-plat-link {
+      display: flex; align-items: center;
+      text-decoration: none;
+    }
+    .ep-plat-icon {
+      width: 28px; height: 28px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .ep-plat-icon svg { width: 15px; height: 15px; }
+    .ep-plat-link:hover .ep-plat-icon { transform: scale(1.14); }
+    .ep-plat-apple {
+      display: flex; align-items: center; gap: 5px;
+      opacity: 0.38; cursor: default; user-select: none;
+    }
+    .ep-plat-soon {
+      font-size: 9.5px; font-weight: 700; color: var(--muted-2);
+      letter-spacing: 0.03em; text-transform: uppercase;
+    }
 
     /* ---------- RECENT EPISODES ---------- */
     .tab-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
@@ -338,7 +385,7 @@
         <div>
           <div class="hero-eyebrow">with <strong>AnnorCode</strong></div>
           <h1>Decoded <span class="brand">Stories</span></h1>
-          <p class="hero-desc">A podcast for creators and tech professionals about the real journeys behind the career, the pivots, the setbacks, and the moments that actually shaped who they became.</p>
+          <p class="hero-desc">Every guest is a creator or tech professional on paper. On this podcast, we decode who they actually are underneath that, the pivots, the setbacks, and the moments that made them who they are, beyond the job title.</p>
           <div class="platform-row" id="platformRow">
             <!-- filled by JS from episodes.json -->
           </div>
@@ -353,9 +400,16 @@
   <div class="wrap">
     <div class="section-head">
       <div><h2>Featured Episodes</h2></div>
-      <a href="#recent" class="view-all">View all episodes &rarr;</a>
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="featuredPrev" aria-label="Scroll left" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-btn" id="featuredNext" aria-label="Scroll right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
     </div>
-    <div class="featured-grid" id="featuredGrid">
+    <div class="featured-carousel" id="featuredGrid">
       <!-- filled by JS from episodes.json -->
     </div>
   </div>
@@ -499,20 +553,34 @@
   }
 
   function epCardHTML(ep, showSpotify, isFeatured) {
-    const href = ep.url || showSpotify || '#';
-    const viewText = isFeatured ? 'View →' : 'Listen Now →';
-    const classAttr = isFeatured ? 'ep-card reveal' : 'ep-card';
+    const epSpotify = ep.spotifyUrl || showSpotify || null;
+    const primaryHref = ep.url || epSpotify || '#';
     const dataAttr = isFeatured ? '' : ` data-season="${ep.season}"`;
+
+    const spotifyIcon = epSpotify
+      ? `<a href="${escHtml(epSpotify)}" class="ep-plat-link" target="_blank" rel="noopener noreferrer" aria-label="Listen on Spotify" title="Listen on Spotify"><span class="ep-plat-icon icon-spotify">${SPOTIFY_SVG}</span></a>`
+      : '';
+
+    const youtubeIcon = ep.url
+      ? `<a href="${escHtml(ep.url)}" class="ep-plat-link" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube" title="Watch on YouTube"><span class="ep-plat-icon icon-youtube">${YOUTUBE_SVG}</span></a>`
+      : '';
+
+    const appleIcon = `<span class="ep-plat-apple" title="Apple Podcasts — coming soon"><span class="ep-plat-icon icon-apple">${APPLE_SVG}</span><span class="ep-plat-soon">soon</span></span>`;
+
     return `
-      <a href="${escHtml(href)}" class="${classAttr}"${dataAttr} target="_blank" rel="noopener noreferrer">
-        <div class="ep-thumb">
+      <div class="ep-card"${dataAttr}>
+        <a href="${escHtml(primaryHref)}" class="ep-thumb" target="_blank" rel="noopener noreferrer">
           <img src="${escHtml(ep.image)}" alt="${escHtml(ep.title)} thumbnail" loading="lazy">
-        </div>
+        </a>
         <div class="ep-date">${escHtml(seasonLabel(ep))}</div>
         <div class="ep-cat">${escHtml(ep.category)}</div>
         <div class="ep-title">${escHtml(ep.title)} &ndash; ${escHtml(ep.guest)}</div>
-        <span class="ep-view">${viewText}</span>
-      </a>`;
+        <div class="ep-platforms">
+          ${spotifyIcon}
+          ${youtubeIcon}
+          ${appleIcon}
+        </div>
+      </div>`;
   }
 
   function buildPlatformBadges(platforms) {
@@ -548,7 +616,7 @@
   async function init() {
     let data;
     try {
-      const res = await fetch('content/episodes.json');
+      const res = await fetch('content/episodes.json', { cache: 'no-cache' });
       data = await res.json();
     } catch (e) {
       console.error('Could not load episode data:', e);
@@ -579,8 +647,32 @@
     document.getElementById('recentGrid').innerHTML =
       episodes.map(ep => epCardHTML(ep, show.platforms.spotify, false)).join('');
 
+    initFeaturedCarousel();
     initRecentEpisodes();
     initScrollReveal();
+  }
+
+  /* Featured carousel arrows */
+  function initFeaturedCarousel() {
+    const carousel = document.getElementById('featuredGrid');
+    const prev = document.getElementById('featuredPrev');
+    const next = document.getElementById('featuredNext');
+    if (!carousel || !prev || !next) return;
+
+    function scrollAmount() {
+      const card = carousel.querySelector('.ep-card');
+      return card ? card.offsetWidth + 24 : 324; // card width + gap
+    }
+
+    function updateArrows() {
+      prev.disabled = carousel.scrollLeft <= 4;
+      next.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 4;
+    }
+
+    prev.addEventListener('click', () => carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+    next.addEventListener('click', () => carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+    carousel.addEventListener('scroll', updateArrows, { passive: true });
+    updateArrows();
   }
 
   /* Season tabs + Load More */
