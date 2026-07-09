@@ -1,0 +1,134 @@
+{
+  "show": {
+    "title": "Decoded Stories",
+    "host": "Nyamekye Annor (AnnorCode)",
+    "tagline": "A podcast for creators and tech professionals about the real journeys behind the career.",
+    "description": "A podcast for creators and tech professionals about the real journeys behind the career, the pivots, the setbacks, and the moments that actually shaped who they became.",
+    "contactEmail": "annorcode@gmail.com",
+    "platforms": {
+      "spotify": "https://open.spotify.com/show/4CxKKkGOzq6o3XHpmcaeK8",
+      "youtube": "https://www.youtube.com/playlist?list=PLd0eDlBvid2Yl8zTOLVgY8zUGfw5HcP_-",
+      "apple": null
+    }
+  },
+  "featured": [
+    "s3-ep09",
+    "s3-ep07",
+    "s2-finale"
+  ],
+  "episodes": [
+    {
+      "id": "s3-ep09",
+      "season": 3,
+      "episodeLabel": "Finale",
+      "guest": "Kedasha",
+      "title": "Walking Away From a Dream Job to Build Something of Her Own",
+      "category": "Career Pivot",
+      "description": "On leaving a dream job at GitHub, betting on herself, and what it actually feels like the morning after you quit."
+    },
+    {
+      "id": "s3-ep08",
+      "season": 3,
+      "episodeLabel": "Episode 8",
+      "guest": "David Odeleye",
+      "title": "Owning the Story You Tell About Your Work",
+      "category": "Personal Branding",
+      "description": ""
+    },
+    {
+      "id": "s3-ep07",
+      "season": 3,
+      "episodeLabel": "Episode 7",
+      "guest": "Dr. Samuel K. Boateng",
+      "title": "The Discipline Behind Every \"Overnight Success\"",
+      "category": "Discipline & Growth",
+      "description": "A conversation on research, resilience, and building a career nobody hands you a roadmap for."
+    },
+    {
+      "id": "s3-ep06",
+      "season": 3,
+      "episodeLabel": "Episode 6",
+      "guest": "Ari",
+      "title": "Finding Your Lane When Everyone's Loud Online",
+      "category": "Creative Identity",
+      "description": ""
+    },
+    {
+      "id": "s3-ep05",
+      "season": 3,
+      "episodeLabel": "Episode 5",
+      "guest": "Haji",
+      "title": "Rebuilding Confidence After a Rough Career Chapter",
+      "category": "Resilience",
+      "description": ""
+    },
+    {
+      "id": "s3-ep04",
+      "season": 3,
+      "episodeLabel": "Episode 4",
+      "guest": "Derrick",
+      "title": "The Long Road In, No Shortcuts Included",
+      "category": "Career Pivot",
+      "description": ""
+    },
+    {
+      "id": "s3-ep03",
+      "season": 3,
+      "episodeLabel": "Episode 3",
+      "guest": "Sahana",
+      "title": "Betting on Yourself Before Anyone Else Does",
+      "category": "Self-Belief",
+      "description": ""
+    },
+    {
+      "id": "s3-ep02",
+      "season": 3,
+      "episodeLabel": "Episode 2",
+      "guest": "Bree Hall",
+      "title": "Building an Audience Without Losing Yourself",
+      "category": "Personal Branding",
+      "description": ""
+    },
+    {
+      "id": "s3-ep01",
+      "season": 3,
+      "episodeLabel": "Episode 1",
+      "guest": "Byron Horne",
+      "title": "Season 3 Kickoff: What Changed This Year",
+      "category": "Behind the Scenes",
+      "description": ""
+    },
+    {
+      "id": "s2-finale",
+      "season": 2,
+      "episodeLabel": "Finale",
+      "guest": "Disleve Kanku",
+      "title": "Delayed Gratification in a Get-Rich-Quick World",
+      "category": "Mindset",
+      "description": "The Season 2 finale on patience, long games, and why the shortcut rarely holds up."
+    },
+    {
+      "id": "s2-ep09",
+      "season": 2,
+      "episodeLabel": "Episode 9",
+      "guest": "Keith Foster",
+      "title": "From UPS to Government Tech",
+      "category": "Career Pivot",
+      "description": ""
+    },
+    {
+      "id": "s1-trailer",
+      "season": 1,
+      "episodeLabel": "Trailer",
+      "guest": "AnnorCode",
+      "title": "The Beginning of Decoded Stories — Why I Started a Podcast",
+      "category": "Origin Story",
+      "description": ""
+    }
+  ],
+  "notes": [
+    "Season 2 episodes 1-8 are on Spotify but weren't pulled into this file yet — grab those from Spotify for Creators before the build if you want the full archive.",
+    "Empty description fields need the real show notes pulled in, or can stay blank and just show the title.",
+    "Every episode currently points at placeholder thumbnails (thumb.jpg) — swap in real per-episode art as you get it."
+  ]
+}
