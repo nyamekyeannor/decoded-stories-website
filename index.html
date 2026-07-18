@@ -375,7 +375,83 @@
       padding-top: 24px; border-top: 1px solid var(--border);
       font-size: 13px; color: var(--muted-2);
     }
+
+    /* ========== DARK MODE ========== */
+    [data-theme="dark"] {
+      --bg: #121212;
+      --bg-alt: #1A1A1A;
+      --card: #1F1F1F;
+      --border: #2C2C2C;
+      --text: #F0F0F0;
+      --text-soft: #D0D0D0;
+      --muted: #A0A0A0;
+      --muted-2: #6B6B6B;
+      --accent-soft: #3D2F10;
+      --accent-tint: #2A2010;
+    }
+    [data-theme="dark"] header {
+      background: rgba(18,18,18,0.9);
+    }
+    [data-theme="dark"] .hero-card::after {
+      background: #2A2010;
+    }
+    [data-theme="dark"] .platform-badge {
+      background: #1F1F1F;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.35), 0 0 0 1px var(--border);
+    }
+    [data-theme="dark"] .ep-thumb {
+      background: #222;
+    }
+    [data-theme="dark"] .about-photo {
+      background: #222;
+    }
+    [data-theme="dark"] .nl-form input,
+    [data-theme="dark"] .guest-form input {
+      background: #1A1A1A;
+    }
+    [data-theme="dark"] .newsletter-box {
+      border-color: var(--border);
+    }
+    [data-theme="dark"] .guest-banner {
+      border-color: var(--border);
+    }
+    [data-theme="dark"] .ep-card:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+    }
+
+    /* ---------- THEME TOGGLE ---------- */
+    #themeToggle {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      background: transparent; color: var(--muted);
+      cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s, color .2s;
+      flex-shrink: 0;
+    }
+    #themeToggle:hover {
+      background: var(--bg-alt); border-color: var(--muted); color: var(--text);
+    }
+    #themeToggle svg { width: 17px; height: 17px; pointer-events: none; }
+    .mobile-overlay .theme-toggle {
+      font-size: 22px; font-weight: 700; color: var(--text);
+      display: flex; align-items: center; gap: 12px;
+      background: transparent; border: none; cursor: pointer;
+      padding: 0; transition: color .2s;
+    }
+    .mobile-overlay .theme-toggle:hover { color: var(--accent-dark); }
+    .mobile-overlay .theme-toggle svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .theme-toggle .icon-moon { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+    .theme-label { display: none; }
+    .mobile-overlay .theme-toggle .theme-label { display: inline; }
   </style>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('decoded-stories-theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
 </head>
 <body>
 
@@ -391,6 +467,10 @@
       <a href="#featured">Episodes</a>
       <a href="#about">About</a>
       <a href="#guest">Be a Guest</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.94" y2="5.94"/><line x1="18.06" y1="18.06" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.94" y2="18.06"/><line x1="18.06" y1="5.94" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <a href="#newsletter" class="nav-cta">Join the Newsletter</a>
     </div>
   </nav>
@@ -401,6 +481,11 @@
   <a href="#featured" class="mobile-overlay-link">Episodes</a>
   <a href="#about" class="mobile-overlay-link">About</a>
   <a href="#guest" class="mobile-overlay-link">Be a Guest</a>
+  <button class="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.94" y2="5.94"/><line x1="18.06" y1="18.06" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.94" y2="18.06"/><line x1="18.06" y1="5.94" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span class="theme-label">Dark Mode</span>
+  </button>
   <a href="#newsletter" class="nav-cta mobile-overlay-link">Join the Newsletter</a>
 </div>
 
@@ -844,6 +929,25 @@
   // Click on overlay background (not on a link) closes menu
   mobileOverlay.addEventListener('click', (e) => {
     if (e.target === mobileOverlay) closeMenu();
+  });
+
+  /* Theme toggle */
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('decoded-stories-theme', theme);
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+  }
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
   });
 
   /* Guest form — AJAX submission for Netlify Forms */
