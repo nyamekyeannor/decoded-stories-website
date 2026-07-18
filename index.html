@@ -384,6 +384,9 @@
     @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .testimonials-grid { grid-template-columns: 1fr; } }
 
+    /* Re-enable by removing "section-hidden" class from the #testimonials section. */
+    .section-hidden { display: none; }
+
     .tcard {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -391,11 +394,14 @@
       padding: 28px 28px 24px;
       display: flex; flex-direction: column;
       position: relative;
-      transition: box-shadow .2s, transform .2s;
+      transition: box-shadow .2s, transform .2s, background .2s;
+      /* When .tcard is an <a> element */
+      text-decoration: none; color: inherit; cursor: pointer;
     }
     .tcard:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(20,20,25,0.09);
+      box-shadow: 0 10px 28px rgba(20,20,25,0.12);
+      background: var(--accent-tint);
     }
     .tcard-mark {
       font-family: var(--font-heading);
@@ -416,8 +422,6 @@
       font-size: 13.5px; font-weight: 700;
       color: var(--muted);
     }
-    .tcard-attr a { color: var(--muted); transition: color .2s; }
-    .tcard-attr a:hover { color: var(--accent-dark); }
 
     /* ========== DARK MODE ========== */
     [data-theme="dark"] {
@@ -556,7 +560,7 @@
 <!-- FEATURED EPISODES -->
 <section id="featured">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div><h2>Featured Episodes</h2></div>
       <div class="carousel-nav">
         <button class="carousel-btn" id="featuredPrev" aria-label="Scroll left" disabled>
@@ -568,7 +572,7 @@
       </div>
     </div>
   </div>
-  <div class="featured-carousel" id="featuredGrid">
+  <div class="featured-carousel reveal" id="featuredGrid">
     <!-- filled by JS from episodes.json -->
   </div>
 </section>
@@ -576,10 +580,10 @@
 <!-- RECENT EPISODES -->
 <section id="recent">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div><h2>Listen to Recent Episodes</h2></div>
     </div>
-    <div class="tab-row" id="tabRow">
+    <div class="tab-row reveal" id="tabRow">
       <button class="tab-btn active" data-filter="all">All</button>
       <button class="tab-btn" data-filter="1">Season 1</button>
       <button class="tab-btn" data-filter="2">Season 2</button>
@@ -625,8 +629,9 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="alt">
+<!-- Testimonials section hidden until real guest testimonials are added.
+     Remove "section-hidden" class (or this comment block) to re-enable. -->
+<section id="testimonials" class="alt section-hidden">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
@@ -634,7 +639,7 @@
         <p class="section-desc">In their own words, from people who've sat in the chair.</p>
       </div>
     </div>
-    <div class="testimonials-grid" id="testimonialsGrid">
+    <div class="testimonials-grid reveal" id="testimonialsGrid">
       <!-- filled by JS from testimonials.json -->
     </div>
   </div>
@@ -694,7 +699,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="footer-top">
+    <div class="footer-top reveal">
       <div class="footer-brand">
         <img src="assets/logo.png" alt="Decoded Stories logo">
         <span>Decoded Stories</span>
@@ -753,9 +758,10 @@
     const epSpotify = ep.spotifyUrl || showSpotify || null;
     const primaryHref = ep.url || epSpotify || '#';
     const dataAttr = isFeatured ? '' : ` data-season="${ep.season}"`;
+    const revealClass = isFeatured ? '' : ' reveal';
 
     return `
-      <div class="ep-card"${dataAttr}>
+      <div class="ep-card${revealClass}"${dataAttr}>
         <a href="${escHtml(primaryHref)}" class="ep-thumb" target="_blank" rel="noopener noreferrer">
           <img src="${escHtml(ep.image)}" alt="${escHtml(ep.title)} thumbnail" loading="lazy">
         </a>
@@ -854,16 +860,15 @@
     grid.innerHTML = data.testimonials.map(t => {
       const ep = episodes.find(e => e.id === t.episodeId);
       const epUrl = ep ? (ep.url || ep.spotifyUrl || null) : null;
-      const nameHTML = epUrl
-        ? `<a href="${escHtml(epUrl)}" target="_blank" rel="noopener noreferrer">${escHtml(t.name)}</a>`
-        : escHtml(t.name);
       const epLabel = ep ? ` &mdash; ${escHtml(ep.season ? `Season ${ep.season}` : '')}` : '';
+      const tag = epUrl ? `a href="${escHtml(epUrl)}" target="_blank" rel="noopener noreferrer"` : 'div';
+      const closeTag = epUrl ? 'a' : 'div';
       return `
-        <div class="tcard">
+        <${tag} class="tcard">
           <span class="tcard-mark" aria-hidden="true">&ldquo;</span>
           <p class="tcard-quote">${escHtml(t.quote)}</p>
-          <div class="tcard-attr">${nameHTML}${epLabel}</div>
-        </div>`;
+          <div class="tcard-attr">${escHtml(t.name)}${epLabel}</div>
+        </${closeTag}>`;
     }).join('');
   }
 
