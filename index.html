@@ -376,6 +376,49 @@
       font-size: 13px; color: var(--muted-2);
     }
 
+    /* ---------- TESTIMONIALS ---------- */
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      margin-top: 8px;
+    }
+    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    .tcard {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      display: flex; flex-direction: column;
+      position: relative;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .tcard:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(20,20,25,0.09);
+    }
+    .tcard-mark {
+      font-family: var(--font-heading);
+      font-size: 56px; line-height: 1;
+      color: var(--accent);
+      margin-bottom: 10px; display: block;
+      user-select: none;
+    }
+    .tcard-quote {
+      font-size: 15.5px; line-height: 1.65;
+      color: var(--text-soft);
+      flex: 1;
+    }
+    .tcard-attr {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13.5px; font-weight: 700;
+      color: var(--muted);
+    }
+    .tcard-attr a { color: var(--muted); transition: color .2s; }
+    .tcard-attr a:hover { color: var(--accent-dark); }
+
     /* ========== DARK MODE ========== */
     [data-theme="dark"] {
       --bg: #121212;
@@ -582,6 +625,21 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <h2>What Guests Say</h2>
+        <p class="section-desc">In their own words, from people who've sat in the chair.</p>
+      </div>
+    </div>
+    <div class="testimonials-grid" id="testimonialsGrid">
+      <!-- filled by JS from testimonials.json -->
+    </div>
+  </div>
+</section>
+
 <!-- NEWSLETTER -->
 <section id="newsletter">
   <div class="wrap">
@@ -778,7 +836,35 @@
 
     initFeaturedCarousel();
     initRecentEpisodes();
+    initTestimonials(episodes);
     initScrollReveal();
+  }
+
+  async function initTestimonials(episodes) {
+    let data;
+    try {
+      const res = await fetch('content/testimonials.json', { cache: 'no-cache' });
+      data = await res.json();
+    } catch (e) {
+      console.error('Could not load testimonials:', e);
+      return;
+    }
+    const grid = document.getElementById('testimonialsGrid');
+    if (!grid) return;
+    grid.innerHTML = data.testimonials.map(t => {
+      const ep = episodes.find(e => e.id === t.episodeId);
+      const epUrl = ep ? (ep.url || ep.spotifyUrl || null) : null;
+      const nameHTML = epUrl
+        ? `<a href="${escHtml(epUrl)}" target="_blank" rel="noopener noreferrer">${escHtml(t.name)}</a>`
+        : escHtml(t.name);
+      const epLabel = ep ? ` &mdash; ${escHtml(ep.season ? `Season ${ep.season}` : '')}` : '';
+      return `
+        <div class="tcard">
+          <span class="tcard-mark" aria-hidden="true">&ldquo;</span>
+          <p class="tcard-quote">${escHtml(t.quote)}</p>
+          <div class="tcard-attr">${nameHTML}${epLabel}</div>
+        </div>`;
+    }).join('');
   }
 
   /* Featured carousel — arrows + drag-to-scroll */

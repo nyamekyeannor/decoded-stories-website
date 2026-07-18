@@ -1,0 +1,19 @@
+{
+  "testimonials": [
+    {
+      "quote": "[PLACEHOLDER — this is not a real quote, swap with an actual testimonial] This felt less like an interview and more like a conversation with someone who actually wanted to understand my story.",
+      "name": "Guest Name",
+      "episodeId": "s3-ep10"
+    },
+    {
+      "quote": "[PLACEHOLDER — this is not a real quote, swap with an actual testimonial] I walked away from this conversation seeing my own career differently. Highly recommend.",
+      "name": "Guest Name",
+      "episodeId": "s3-ep08"
+    },
+    {
+      "quote": "[PLACEHOLDER — this is not a real quote, swap with an actual testimonial] Genuinely one of the best conversations I've had about my own journey, on or off a podcast.",
+      "name": "Guest Name",
+      "episodeId": "s2-ep10"
+    }
+  ]
+}
